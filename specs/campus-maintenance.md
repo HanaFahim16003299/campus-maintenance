@@ -82,8 +82,17 @@ The backend changes status from `open` to `resolved`.
 
 ## Data model diagram
 
-<!-- Paste the Mermaid ER diagram produced in Phase 2 here. -->
-
+````mermaid erDiagram
+    MAINTENANCE_REQUEST {
+        ObjectId _id PK
+        string title
+        string description
+        string location
+        string category "equipment | electrical | plumbing | facility | other"
+        string status "open | resolved, default open"
+        date createdAt
+        date updatedAt
+    }                                                       ```
 ## Team slices
 
 | Student | Slice                                                                        |
@@ -102,3 +111,4 @@ The backend changes status from `open` to `resolved`.
 - Diff is reviewed.
 - AI usage is logged.
 - PR passes CI and required review.
+````
